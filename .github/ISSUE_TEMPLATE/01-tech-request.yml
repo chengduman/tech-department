@@ -1,0 +1,55 @@
+# 技术需求
+name: 🛠 技术需求/开发任务
+description: 提交技术开发需求（爬虫、自动化、工具等）
+title: "[技术] "
+labels: ["技术需求"]
+assignees: []
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 需求类型
+      options:
+        - 数据爬虫开发
+        - API对接/集成
+        - 自动化脚本
+        - 内部工具开发
+        - 系统运维
+        - 技术方案评估
+    validations:
+      required: true
+  - type: textarea
+    id: requirement
+    attributes:
+      label: 需求详情
+      placeholder: 详细描述技术需求背景、目标和验收标准
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 目标数据源/系统
+      placeholder: 如需爬虫，填写目标URL；如需对接API，填写接口名称
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options:
+        - 🔴 P0 - 阻塞（影响项目进度）
+        - 🟡 P1 - 高（本周需要）
+        - 🟢 P2 - 中（本月需要）
+        - 🔵 P3 - 低（可排期）
+  - type: dropdown
+    id: assign
+    attributes:
+      label: 指派给
+      options:
+        - 吴景辉（部长分配）
+        - 何俊杰（高级工程师-系统开发）
+        - 宋欣然（高级工程师-爬虫/数据管道）
+        - 叶诗涵（工程师-内部工具）
+        - 周泽宇（工程师-测试/运维）
+  - type: textarea
+    id: notes
+    attributes:
+      label: 备注/参考信息
